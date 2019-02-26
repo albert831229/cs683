@@ -1,3 +1,5 @@
+""" Reference: http://code.activestate.com/recipes/578838-rsa-a-simple-and-easy-to-read-implementation/ """
+
 import random
 
 def get_primes(start, stop):
