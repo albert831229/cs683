@@ -19,7 +19,18 @@ certain time intervals, and the receiver may receive it by observing the state o
 
 ## Classes of communication ways
 - ### Storage Channels
+Storage channels involve data that is presented or written to a storage location to transmit information, ex. File system.
 - ### Timing Channels
-- 
+Timing channels send information in a way that involves manipulating the timing properties of a component of the system.
+
+## Create a nearly undetectalbe convert channel with Tunnelshell
+Tunnelshell is a light program that can only run on Linux. It operates in the similar client/server architecture like most Linux/Unix applications.  The beauty of Tunnelshell is that it supports variety of protocols including TCP, UDP, ICMP, and RawIP. Also, it is able to fragment packets to get past firewalls and intrusion detection systems.<br>
+
+Steps to build an undetectable covert channel are as follows:
+1. Fire up a Khali linux server and download Tunnelshell from https://packetstormsecurity.com/search/files/?q=Tunnelshell. 
+2. We can upload Tunnelshell to the victim by TFTP it from my attacking systm.
+2. Untar Tunnelshell and compile it by typing "make". To activate it on victim, type "./tunneld".
+3. Connect to the tunnelshell daemon on the victim by typing "./tunnel -t frag victim/IP/address". When connect to Tunnelshell, it does not give us a command prompt, but rather a blank line. We can then type any Linux command and it returns output as if we were at a Linux prompt.
+4. Try to detect Tunnelshell on the victim. Type "netstat" to show all current connections to the computer. Here, our tunnelshell will not display. However, if we list all running processes, our tunnelshell will appear on it unless we can embed it in a rootkit that will hide its process.
 
 
