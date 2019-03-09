@@ -78,3 +78,7 @@ If so, you’re done! Your ducky script has been compiled and transferred to the
 ### 5. Test it
 Slide out the microSD card and insert it back into the keyboard adapter that it came in. Plug that keyboard adapter into your computer.<br>
 If you want to re-rerun the payload without removing and re-inserting the keyboard adapter, you can press the round black button that’s just below the microSD slot.
+
+## Reference
+https://blog.hartleybrody.com/rubber-ducky-guide/ <br>
+https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payload---restart-prank
