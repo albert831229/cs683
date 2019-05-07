@@ -22,5 +22,11 @@ w= word size in bits, r =rounds, b = length of encryption key in bytes<br><br>
 
 # Encryption
 <img src="./img/encrypt.png" width="500">
+
 # Decryption
 <img src="./img/decrypt.png" width="500">
+
+# File Encryption
+1. Encrypt file with ```go run main.go encrypt <your_file>```
+2. Create the encrypted file and the key.
+2. Decrypt file with ```go run main.go decrypt <key_file> <encrypted file>```
