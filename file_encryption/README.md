@@ -16,3 +16,12 @@ w= word size in bits, r =rounds, b = length of encryption key in bytes<br><br>
 - axb :integer multiplication modulo 2w
 - a<<<b :rotate the w-bit word a to the left by the amount given by the least significant lg w bits of b
 - a>>>b :rotate the w-bit word a to the right by the amount given by the least significant lg w bits of b
+
+# Key Generator
+![key](img/key_derive)
+
+# Encryption
+![encrypt](img/encrypt)
+
+# Decryption
+![decrypt](img/decrypt)
