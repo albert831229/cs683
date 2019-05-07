@@ -18,10 +18,9 @@ w= word size in bits, r =rounds, b = length of encryption key in bytes<br><br>
 - a>>>b :rotate the w-bit word a to the right by the amount given by the least significant lg w bits of b
 
 # Key Generator
-<img src="./img/key_generator.png" width="48">
+<img src="./img/key_derive.png" width="500">
 
 # Encryption
-![encrypt](img/encrypt.png)
-
+<img src="./img/encrypt.png" width="500">
 # Decryption
-![decrypt](img/decrypt.png)
+<img src="./img/decrypt.png" width="500">
